@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp">
+
+    <ImageView
+        android:id="@+id/img_course_recommend"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:background="@drawable/background_course_recommend_image"
+        android:contentDescription="@string/img_course_recommend"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_recommend_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorCourseRecommendTextTitle"
+        android:layout_toEndOf="@id/img_course_recommend"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:lines="1"
+        android:singleLine="true"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txt_course_recommend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_below="@id/txt_course_recommend_list_title"
+        android:layout_toEndOf="@id/img_course_recommend"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorCourseRecommendTextName"/>
+
+    <TextView
+        android:id="@+id/txt_course_recommend_list_name_mark"
+        android:layout_width="58dp"
+        android:layout_height="20dp"
+        android:textColor="@color/colorCourseRecommendListNameMark"
+        android:layout_toEndOf="@id/txt_course_recommend_name"
+        android:layout_marginStart="8dp"
+        android:layout_below="@+id/txt_course_recommend_list_title"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:background="@drawable/background_course_recommend_list_name_mark"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_recommend_list_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/colorCourseRecommendText"
+        android:maxLines="2"
+        android:layout_below="@id/txt_course_recommend_name"
+        android:layout_toEndOf="@id/img_course_recommend"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/img_course_recommend"
+        android:layout_marginTop="18dp"
+        android:background="@color/colorExploreLine" />
+
+</RelativeLayout>

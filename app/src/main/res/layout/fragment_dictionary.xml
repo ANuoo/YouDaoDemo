@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/dictionary_toolbar_enter"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/background_gradient">
+
+        <ImageView
+            android:id="@+id/img_dictionary_camera_toolbar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/img_dictionary_camera_toolbar"
+            android:src = "@drawable/dictionary_camera_toolbar"/>
+
+        <TextView
+            android:id="@+id/txt_dictionary_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"
+            android:drawableEnd="@drawable/dictiona_volume_edittxt"
+            android:drawablePadding="8dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/edt_dictionary_toolbar"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textColor="@color/colorCourseRecommendText"
+            android:background="@drawable/background_dictionary_toolbar_edittxt"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear_home_top_tab"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/dictionary_toolbar_enter"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_dictionary_recommend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/but_dictionary_recommend"
+            android:textSize="14sp"
+            android:textColor="@color/colorPink"
+            android:background="@color/colorDictionaryTabBackground"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/but_dictionary_follow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/but_dictionary_follow"
+            android:textColor="@color/colorHomeSelectOff"
+            android:background="@color/colorDictionaryTabBackground"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/but_dictionary_foreigners"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/but_dictionary_foreigners"
+            android:textColor="@color/colorHomeSelectOff"
+            android:background="@color/colorDictionaryTabBackground"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/but_dictionary_column"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/but_dictionary_column"
+            android:textColor="@color/colorHomeSelectOff"
+            android:background="@color/colorDictionaryTabBackground"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_dictionary_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_home_top_tab">
+
+        </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

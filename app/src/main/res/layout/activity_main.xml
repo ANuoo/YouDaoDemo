@@ -1,0 +1,63 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </FrameLayout>
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/colorWord_slant" />
+
+    <RadioGroup
+        android:id="@+id/radio_home_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:checkedButton="@id/but_home_dictionary"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/but_home_dictionary"
+            android:drawableTop="@drawable/img_home_dictionary_change"
+            style="@style/radiobutton_style"
+            android:text="@string/but_home_dictionary" />
+
+        <RadioButton
+            android:id="@+id/but_home_translate"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/img_home_translate_change"
+            android:text="@string/but_home_translate" />
+
+        <RadioButton
+            android:id="@+id/but_home_course"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/img_home_course_change"
+            android:text="@string/but_home_course" />
+
+        <RadioButton
+            android:id="@+id/but_home_explore"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/img_home_explore_change"
+            android:text="@string/but_home_explore" />
+
+        <RadioButton
+            android:id="@+id/but_home_mine"
+            style="@style/radiobutton_style"
+            android:drawableTop="@drawable/img_home_mine_change"
+            android:text="@string/but_home_mine" />
+
+    </RadioGroup>
+
+</LinearLayout>

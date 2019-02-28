@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <TextView
+        android:id="@+id/txt_course_select_list_title_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/course_components_select_background"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:paddingStart="6dp"
+        android:paddingEnd="4dp"
+        android:paddingTop="2dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_select_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/colorCourseRecommendTextTitle"
+        android:lines="1"
+        android:singleLine="true"
+        android:layout_toEndOf="@id/txt_course_select_list_title_mark"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_select_list_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_course_select_list_title_mark"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorCourseRecommendText" />
+
+    <com.example.anuo.youdao.view.CircleImageView
+        android:id="@+id/img_course_select_circle"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/txt_course_select_list_time"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_select_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorCourseRecommendText"
+        android:textSize="12sp"
+        android:layout_below="@id/img_course_select_circle"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_select_list_free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_course_select_list_free"
+        android:textSize="22sp"
+        android:textColor="@color/colorCourseSelectListFree"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/txt_course_select_list_time"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_select_list_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_course_select_list_free"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorCourseRecommendText" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.6dp"
+        android:layout_below="@id/txt_course_select_list_mark"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorExploreLine" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundDictionaryColumn">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorBackgroundSearch"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@drawable/background_search_associate">
+
+            <ImageView
+                android:id="@+id/img_search_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="@string/img_search_back"
+                android:scaleType="centerCrop"
+                android:src="@drawable/search_arrow_back_black" />
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="260dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toEndOf="@id/img_search_back"
+                android:autofillHints="@string/edt_search"
+                android:background="#ffffff"
+                android:hint="@string/edt_search"
+                android:inputType="textNoSuggestions"
+                android:lines="1"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/background_search_edittxt_cursor" />
+
+
+            <ImageView
+                android:id="@+id/but_search_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/edt_search"
+                android:background="#ffffff"
+                android:contentDescription="@string/img_search_clear"
+                android:scaleType="centerCrop"
+                android:src="@drawable/search_clear_all_gray_ke" />
+
+            <View
+                android:id="@+id/view_search_edit_line"
+                android:layout_width="1dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/but_search_clear"
+                android:background="@color/colorHomeSelectOff" />
+
+            <ImageView
+                android:id="@+id/img_search_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/view_search_edit_line"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/img_search_black"
+                android:src="@drawable/search_black" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/frame_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/toolbar_search"
+        android:background="@color/colorBackgroundSearch">
+
+    </FrameLayout>
+
+</RelativeLayout>

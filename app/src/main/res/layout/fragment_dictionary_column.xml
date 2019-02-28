@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundDictionaryColumn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/txt_dictionary_column_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/txt_dictionary_column_top"
+            android:textColor="@color/colorHomeSelectOff"
+            android:textSize="14sp" />
+        <TableLayout
+            android:id="@+id/table_dictionary_column_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_top_first"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_OneSentence"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_one_sentence"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_Foreigners"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_foreigners"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_Morning"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_morning"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_top_second"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+                <Button
+                    android:id="@+id/but_dictionary_column_Welfare"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_welfare"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_Life"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/but_dictionary_column_life"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_Idol"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_idol"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_top_third"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+                <Button
+                    android:id="@+id/but_dictionary_column_Cartoon"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_cartoon"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_Research"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_research"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_SelfStudy"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_self_study"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_dictionary_column_anecdote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_dictionary_column_anecdote"
+            android:textColor="@color/colorHomeSelectOff"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"/>
+
+        <TableLayout
+            android:id="@+id/table_dictionary_column_anecdote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_anecdote_first"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+                <Button
+                    android:id="@+id/but_dictionary_column_relaxed"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_relaxed"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_world"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_world"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_fresh"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_fresh"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_anecdote_second"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_originality"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_originality"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_masses"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_masses"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_crops"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_crops"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_dictionary_column_foreigner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_dictionary_column_foreigner"
+            android:textSize="14sp"
+            android:textColor="@color/colorHomeSelectOff"/>
+
+        <TableLayout
+            android:id="@+id/table_dictionary_column_foreigner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_foreigner_first"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_show"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_show"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_omg"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_omg"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_interview"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_interview"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_dictionary_column_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_dictionary_column_movies"
+            android:textColor="@color/colorHomeSelectOff"
+            android:textSize="14sp"/>
+
+        <TableLayout
+            android:id="@+id/table_dictionary_column_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_movies_first"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_music"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_music"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_time"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_time"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBackgroundDictionaryColumn"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_dictionary_column_culture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/txt_dictionary_column_culture"
+            android:textColor="@color/colorHomeSelectOff"
+            android:textSize="14sp"/>
+
+        <TableLayout
+            android:id="@+id/table_dictionary_column_culture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_culture_first"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_course"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_course"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_earlier"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_earlier"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_intensive"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_intensive"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_culture_second"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_child"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_child"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/colorBackgroundDictionaryColumn"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_dictionary_column_prose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/but_dictionary_column_prose"
+            android:textColor="@color/colorHomeSelectOff"
+            android:textSize="14sp" />
+
+        <TableLayout
+            android:id="@+id/table_dictionary_column_prose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_prose_first"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_bilingual"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_bilingual"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_reading"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_reading"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_english_reading"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_english_reading"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_prose_second"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_breakfast"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_breakfast"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_story"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_story"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBackgroundDictionaryColumn"
+                    style="?android:attr/borderlessButtonStyle"/>
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_dictionary_column_examination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/txt_dictionary_column_examination"
+            android:textColor="@color/colorHomeSelectOff"
+            android:textSize="14sp"/>
+
+        <TableLayout
+            android:id="@+id/table_dictionary_column_examination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TableRow
+                android:id="@+id/table_dictionary_column_examination_first"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <Button
+                    android:id="@+id/but_dictionary_column_interesting"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_interesting"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_postgraduate"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/but_dictionary_column_postgraduate"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+                <Button
+                    android:id="@+id/but_dictionary_column_material"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:text="@string/but_dictionary_column_material"
+                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:background="@drawable/background_dictionary_column_button"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>

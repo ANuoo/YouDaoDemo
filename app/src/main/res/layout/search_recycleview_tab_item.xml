@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_tab"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/colorBackgroundSearch"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorHomeSelectOff"
+            android:clickable="true"
+            android:duplicateParentState="true" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_chinese"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_chinese"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_japan"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_japan"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_korea"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_korea"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_france"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_france"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_german"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_germany"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_portugal"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_portugal"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_spain"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_spain"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_russia"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_russia"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_tibetan"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:background="@color/colorBackgroundSearch"-->
+            <!--android:text="@string/tab_tibetan"-->
+            <!--android:textColor="@color/colorHomeSelectOff"-->
+            <!--android:clickable="true"-->
+            <!--android:duplicateParentState="true"/>-->
+        <!---->
+</LinearLayout>

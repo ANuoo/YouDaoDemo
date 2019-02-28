@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/img_course_guidance_video"
+        android:layout_width="360dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/img_course_guidance_video"/>
+
+    <ImageView
+        android:id="@+id/img_course_guidance_video_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/course_components_video_touch"
+        android:contentDescription="@string/img_course_guidance_video_button"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="160dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_guidance_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorCourseRecommendTextTitle"
+        android:layout_below="@id/img_course_guidance_video"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/txt_course_guidance_list_title_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_course_guidance_video"
+        android:layout_marginStart="295dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/course_components_video_button"
+        android:gravity="center"
+        android:text="@string/txt_course_guidance_title_mark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff" />
+
+    <ImageView
+        android:id="@+id/img_course_guidance_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/course_components_audio_play"
+        android:contentDescription="@string/img_course_guidance_play"
+        android:layout_below="@id/txt_course_guidance_list_title"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txt_course_guidance_list_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_course_guidance_list_title"
+        android:layout_toEndOf="@id/img_course_guidance_play"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorCourseRecommendText"
+        android:textSize="12sp" />
+
+</RelativeLayout>
