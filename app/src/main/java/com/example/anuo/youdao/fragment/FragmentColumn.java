@@ -12,17 +12,18 @@ import com.example.anuo.youdao.R;
 
 public class FragmentColumn extends Fragment implements View.OnClickListener {
     private View view;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if(view == null){
-            view = inflater.inflate(R.layout.fragment_dictionary_column,container,false);
+        if (view == null) {
+            view = inflater.inflate(R.layout.fragment_dictionary_column, container, false);
             initView();
         }
         return view;
     }
 
-    private void initView(){
+    private void initView() {
 
     }
 

@@ -14,12 +14,12 @@ public class ThirdFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.dictionary_fragment_third,container,false);
+        View view = inflater.inflate(R.layout.dictionary_fragment_third, container, false);
         initView(view);
-        return  view;
+        return view;
     }
 
-    private void initView(View view){
+    private void initView(View view) {
 
     }
 

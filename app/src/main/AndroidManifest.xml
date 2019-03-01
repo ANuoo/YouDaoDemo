@@ -32,7 +32,7 @@
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.WordActivity" />
-        <activity android:name=".activity.NotFindActivity"/>
+        <activity android:name=".activity.NotFindActivity" />
     </application>
 
 </manifest>

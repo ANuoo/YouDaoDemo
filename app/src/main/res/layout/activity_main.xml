@@ -1,8 +1,7 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/frame_home"
@@ -11,6 +10,7 @@
         android:layout_weight="1">
 
     </FrameLayout>
+
     <View
         android:id="@+id/view_line"
         android:layout_width="match_parent"
@@ -23,15 +23,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:checkedButton="@id/but_home_dictionary"
         android:background="#ffffff"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:checkedButton="@id/but_home_dictionary"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/but_home_dictionary"
-            android:drawableTop="@drawable/img_home_dictionary_change"
             style="@style/radiobutton_style"
+            android:drawableTop="@drawable/img_home_dictionary_change"
             android:text="@string/but_home_dictionary" />
 
         <RadioButton

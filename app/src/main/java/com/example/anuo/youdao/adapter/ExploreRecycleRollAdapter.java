@@ -17,20 +17,20 @@ public class ExploreRecycleRollAdapter extends RecyclerView.Adapter<ExploreRecyc
     private Context mContext;
     private List<ExploreRecycleRollView> mExploreRecycleRollViewList;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textView;
         TextView mtextView;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             super(view);
-            imageView = (ImageView)view.findViewById(R.id.img_explore_roll_item);
-            textView = (TextView)view.findViewById(R.id.txt_explore_roll_item);
-            mtextView = (TextView)view.findViewById(R.id.txt_explore_roll_sign);
+            imageView = (ImageView) view.findViewById(R.id.img_explore_roll_item);
+            textView = (TextView) view.findViewById(R.id.txt_explore_roll_item);
+            mtextView = (TextView) view.findViewById(R.id.txt_explore_roll_sign);
         }
     }
 
-    public ExploreRecycleRollAdapter(Context context,List<ExploreRecycleRollView> exploreRecycleRollViews){
+    public ExploreRecycleRollAdapter(Context context, List<ExploreRecycleRollView> exploreRecycleRollViews) {
         this.mContext = context;
         mExploreRecycleRollViewList = exploreRecycleRollViews;
     }
@@ -38,7 +38,7 @@ public class ExploreRecycleRollAdapter extends RecyclerView.Adapter<ExploreRecyc
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = View.inflate(mContext,R.layout.explore_recycleview_roll,null);
+        View view = View.inflate(mContext, R.layout.explore_recycleview_roll, null);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

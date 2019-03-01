@@ -17,18 +17,18 @@ public class ExploreRecycleAdapter extends RecyclerView.Adapter<ExploreRecycleAd
     private Context mContext;
     private List<ExploreRecycleView> mExploreRecycleView;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView mImageView;
         TextView mTextView;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             super(view);
-            mImageView = (ImageView)view.findViewById(R.id.img_explore_item);
-            mTextView = (TextView)view.findViewById(R.id.txt_explore_item);
+            mImageView = (ImageView) view.findViewById(R.id.img_explore_item);
+            mTextView = (TextView) view.findViewById(R.id.txt_explore_item);
         }
     }
 
-    public ExploreRecycleAdapter(Context context,List<ExploreRecycleView> exploreRecycleViews){
+    public ExploreRecycleAdapter(Context context, List<ExploreRecycleView> exploreRecycleViews) {
         this.mContext = context;
         mExploreRecycleView = exploreRecycleViews;
     }
@@ -36,7 +36,7 @@ public class ExploreRecycleAdapter extends RecyclerView.Adapter<ExploreRecycleAd
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = View.inflate(mContext,R.layout.explore_recycleview_item,null);
+        View view = View.inflate(mContext, R.layout.explore_recycleview_item, null);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

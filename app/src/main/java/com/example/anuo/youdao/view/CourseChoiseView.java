@@ -4,7 +4,7 @@ public class CourseChoiseView {
     private int imgId;
     private String name;
 
-    public CourseChoiseView(int imgId,String name){
+    public CourseChoiseView(int imgId, String name) {
         this.imgId = imgId;
         this.name = name;
     }

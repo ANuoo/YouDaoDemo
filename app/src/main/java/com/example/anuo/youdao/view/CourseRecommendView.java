@@ -7,7 +7,7 @@ public class CourseRecommendView {
     private String ListNameMark;
     private String ListMark;
 
-    public CourseRecommendView(int imageId,String ListTitle,String ListName,String ListNameMark,String ListMark){
+    public CourseRecommendView(int imageId, String ListTitle, String ListName, String ListNameMark, String ListMark) {
         this.imageId = imageId;
         this.ListTitle = ListTitle;
         this.ListName = ListName;

@@ -11,20 +11,21 @@ import com.example.anuo.youdao.fragment.FragmentFollow;
 import com.example.anuo.youdao.fragment.ThirdFragment;
 
 public class MyFragmentAdapter extends FragmentPagerAdapter {
-    private String[] title = new String[]{"推荐","我的关注","老外看东西","全部栏目"};
+    private String[] title = new String[]{"推荐", "我的关注", "老外看东西", "全部栏目"};
 
-    public MyFragmentAdapter(FragmentManager fragmentManager){
+    public MyFragmentAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
     }
+
     @Override
     public Fragment getItem(int i) {
-        if(i == 0){
+        if (i == 0) {
             return new FragmentCommend();
-        }else if(i == 1){
+        } else if (i == 1) {
             return new FragmentFollow();
-        }else if(i == 2){
+        } else if (i == 2) {
             return new ThirdFragment();
-        }else if(i == 3){
+        } else if (i == 3) {
             return new FragmentColumn();
         }
         return new FragmentCommend();

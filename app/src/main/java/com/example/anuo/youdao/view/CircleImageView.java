@@ -21,16 +21,16 @@ public class CircleImageView extends AppCompatImageView {
     private Paint paint;
     private Matrix matrix;
 
-    public CircleImageView(Context context){
-        this(context,null);
+    public CircleImageView(Context context) {
+        this(context, null);
     }
 
-    public CircleImageView(Context context, @Nullable AttributeSet attrs){
-        this(context,attrs,0);
+    public CircleImageView(Context context, @Nullable AttributeSet attrs) {
+        this(context, attrs, 0);
     }
 
-    public CircleImageView(Context context,@Nullable AttributeSet attrs,int defStyleAttr){
-        super(context,attrs,defStyleAttr);
+    public CircleImageView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
         paint = new Paint();
         paint.setAntiAlias(true);
         matrix = new Matrix();
@@ -41,29 +41,29 @@ public class CircleImageView extends AppCompatImageView {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         width = getMeasuredWidth();
         height = getMeasuredHeight();
-        radius = Math.min(width,height)/2;
+        radius = Math.min(width, height) / 2;
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         Drawable drawable = getDrawable();
-        if(drawable == null){
+        if (drawable == null) {
             super.onDraw(canvas);
             return;
         }
-        if(drawable instanceof BitmapDrawable){
+        if (drawable instanceof BitmapDrawable) {
             paint.setShader(initBitmapShader((BitmapDrawable) drawable));
-            canvas.drawCircle(width/2,height/2,radius,paint);
+            canvas.drawCircle(width / 2, height / 2, radius, paint);
             return;
         }
         super.onDraw(canvas);
     }
 
-    private BitmapShader initBitmapShader(BitmapDrawable drawable){
+    private BitmapShader initBitmapShader(BitmapDrawable drawable) {
         Bitmap bitmap = drawable.getBitmap();
-        BitmapShader bitmapShader = new BitmapShader(bitmap,Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
-        float scale = Math.max(width/bitmap.getWidth(),height/bitmap.getHeight());
-        matrix.setScale(scale,scale);
+        BitmapShader bitmapShader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
+        float scale = Math.max(width / bitmap.getWidth(), height / bitmap.getHeight());
+        matrix.setScale(scale, scale);
         bitmapShader.setLocalMatrix(matrix);
         return bitmapShader;
     }

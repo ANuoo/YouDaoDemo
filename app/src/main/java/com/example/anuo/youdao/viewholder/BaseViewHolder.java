@@ -7,11 +7,11 @@ import com.example.anuo.youdao.decoration.IData;
 
 public class BaseViewHolder extends RecyclerView.ViewHolder {
 
-    public BaseViewHolder(View itemView){
+    public BaseViewHolder(View itemView) {
         super(itemView);
     }
 
-    public void FillView(IData data){
+    public void FillView(IData data) {
 
     }
 }

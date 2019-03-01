@@ -6,7 +6,7 @@ public class DictionaryTodayView {
     private String titleMark;
     private String number;
 
-    public DictionaryTodayView(int imgId,String title,String titleMark,String number){
+    public DictionaryTodayView(int imgId, String title, String titleMark, String number) {
         this.imgId = imgId;
         this.title = title;
         this.titleMark = titleMark;

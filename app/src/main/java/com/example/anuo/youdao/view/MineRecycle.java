@@ -5,7 +5,7 @@ public class MineRecycle {
     private int imgId;
     private String mark;
 
-    public MineRecycle(String name,int imgId,String mark){
+    public MineRecycle(String name, int imgId, String mark) {
         this.name = name;
         this.imgId = imgId;
         this.mark = mark;

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="360dp"
     android:layout_height="200dp">
 
@@ -9,27 +8,27 @@
         android:layout_width="360dp"
         android:layout_height="160dp"
         android:layout_marginTop="10dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/img_course_guidance_video"/>
+        android:contentDescription="@string/img_course_guidance_video"
+        android:scaleType="centerCrop" />
 
     <ImageView
         android:id="@+id/img_course_guidance_video_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/course_components_video_touch"
-        android:contentDescription="@string/img_course_guidance_video_button"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="60dp"
-        android:layout_marginStart="160dp"/>
+        android:contentDescription="@string/img_course_guidance_video_button"
+        android:src="@drawable/course_components_video_touch" />
 
     <TextView
         android:id="@+id/txt_course_guidance_list_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorCourseRecommendTextTitle"
         android:layout_below="@id/img_course_guidance_video"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorCourseRecommendTextTitle"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txt_course_guidance_list_title_mark"
@@ -41,28 +40,28 @@
         android:background="@drawable/course_components_video_button"
         android:gravity="center"
         android:text="@string/txt_course_guidance_title_mark"
+        android:textColor="#ffffff"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="#ffffff" />
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/img_course_guidance_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:src="@drawable/course_components_audio_play"
-        android:contentDescription="@string/img_course_guidance_play"
         android:layout_below="@id/txt_course_guidance_list_title"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/img_course_guidance_play"
+        android:scaleType="centerCrop"
+        android:src="@drawable/course_components_audio_play" />
 
     <TextView
         android:id="@+id/txt_course_guidance_list_mark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/txt_course_guidance_list_title"
-        android:layout_toEndOf="@id/img_course_guidance_play"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/img_course_guidance_play"
         android:textColor="@color/colorCourseRecommendText"
         android:textSize="12sp" />
 

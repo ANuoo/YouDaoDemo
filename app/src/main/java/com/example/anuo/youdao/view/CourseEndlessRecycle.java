@@ -6,7 +6,7 @@ public class CourseEndlessRecycle {
     private String markTitle;
     private String mark;
 
-    public CourseEndlessRecycle(int imgId,String title,String markTitle,String mark){
+    public CourseEndlessRecycle(int imgId, String title, String markTitle, String mark) {
         this.imgId = imgId;
         this.title = title;
         this.markTitle = markTitle;

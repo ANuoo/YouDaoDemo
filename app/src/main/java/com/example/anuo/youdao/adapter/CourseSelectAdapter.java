@@ -17,7 +17,7 @@ public class CourseSelectAdapter extends RecyclerView.Adapter<CourseSelectAdapte
     public Context context;
     private List<CourseSelectView> courseSelectViewList;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textTitleMark;
         TextView textTitle;
@@ -25,7 +25,7 @@ public class CourseSelectAdapter extends RecyclerView.Adapter<CourseSelectAdapte
         TextView textName;
         TextView textMark;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             super(view);
             imageView = view.findViewById(R.id.img_course_select_circle);
             textTitleMark = view.findViewById(R.id.txt_course_select_list_title_mark);
@@ -36,7 +36,7 @@ public class CourseSelectAdapter extends RecyclerView.Adapter<CourseSelectAdapte
         }
     }
 
-    public CourseSelectAdapter(Context context,List<CourseSelectView> courseSelectViews){
+    public CourseSelectAdapter(Context context, List<CourseSelectView> courseSelectViews) {
         this.context = context;
         courseSelectViewList = courseSelectViews;
     }
@@ -44,7 +44,7 @@ public class CourseSelectAdapter extends RecyclerView.Adapter<CourseSelectAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view  = View.inflate(context,R.layout.course_recycleview_select_item,null);
+        View view = View.inflate(context, R.layout.course_recycleview_select_item, null);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

@@ -5,7 +5,7 @@ public class ExploreRecycleRollView {
     private String sign;
     private int imgId;
 
-    public ExploreRecycleRollView(String sentence,String sign,int imgId){
+    public ExploreRecycleRollView(String sentence, String sign, int imgId) {
         this.sentence = sentence;
         this.sign = sign;
         this.imgId = imgId;

@@ -6,7 +6,7 @@ public class DictionaryFollowView {
     private String titleMark;
     private String number;
 
-    public DictionaryFollowView(int imageId,String title,String titleMark,String number){
+    public DictionaryFollowView(int imageId, String title, String titleMark, String number) {
         this.imageId = imageId;
         this.title = title;
         this.titleMark = titleMark;

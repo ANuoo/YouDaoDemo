@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +29,9 @@ public class WordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Window window = this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(this.getResources().getColor(R.color.colorDictionaryFollowTopTitle));
         setContentView(R.layout.activity_word);
         Intent intent = getIntent();
         String data = intent.getStringExtra("data");
@@ -34,14 +39,14 @@ public class WordActivity extends AppCompatActivity {
 
     }
 
-    private void sendRequestWithHttpURLConnection(final String data){
+    private void sendRequestWithHttpURLConnection(final String data) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 HttpURLConnection connection = null;
                 BufferedReader reader = null;
                 try {
-                    URL url = new URL("http://dict.youdao.com/jsonapi?jsonversion=2&client=mobile&network=4g&q="+data);
+                    URL url = new URL("http://dict.youdao.com/jsonapi?jsonversion=2&client=mobile&network=4g&q=" + data);
                     connection = (HttpURLConnection) url.openConnection();
                     connection.setRequestMethod("GET");
                     connection.setConnectTimeout(8000);
@@ -53,7 +58,7 @@ public class WordActivity extends AppCompatActivity {
                     while ((line = reader.readLine()) != null) {
                         dataBack.append(line);
                     }
-                    AboutResult(dataBack.toString(),data);
+                    AboutResult(dataBack.toString(), data);
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -72,7 +77,7 @@ public class WordActivity extends AppCompatActivity {
         }).start();
     }
 
-    private void AboutResult(final String dataBack,final String data) {
+    private void AboutResult(final String dataBack, final String data) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -80,15 +85,34 @@ public class WordActivity extends AppCompatActivity {
                 {
                     try {
                         mJSONObject = new JSONObject(dataBack);
-                        JSONObject object = mJSONObject.getJSONObject("simple");
-                        Log.d("WordActivity",dataBack);
-                        if(object.get("query").toString().equals(data)){
-                            JSONArray array = object.getJSONArray("word");
-                            for(int i = 0;i<array.length();i++){
-                                JSONObject object1 = array.getJSONObject(i);
+                        JSONObject objectec = mJSONObject.getJSONObject("ec");
+                        Log.d("WordActivity", dataBack);
+                        JSONArray array = objectec.getJSONArray("word");
+                        for (int i = 0; i < array.length(); i++) {
+                            JSONObject object1 = array.getJSONObject(i);
+                            JSONObject objectdata = object1.getJSONObject("return-phrase");
+                            JSONObject objectdata1 = objectdata.getJSONObject("l");
+                            if (objectdata1.get("i").toString().equals(data)) {
                                 String britain = object1.get("ukphone").toString();
                                 String american = object1.getString("usphone");
-                                initView(britain,american,data);
+                                JSONArray array1 = object1.getJSONArray("trs");
+                                for (int j = 0; j < array1.length(); j++) {
+                                    JSONObject object2 = array1.getJSONObject(j);
+                                    JSONArray array2 = object2.getJSONArray("tr");
+                                    String[] explain = new String[array2.length()];
+                                    for (int k = 0; k < array2.length(); k++) {
+                                        JSONObject object3 = array2.getJSONObject(k);
+                                        JSONObject object4 = object3.getJSONObject("l");
+                                        Log.d("aa", "run: 1");
+                                        JSONArray array3 = object4.getJSONArray("i");
+                                        explain[k] = array3.toString();
+                                    }
+                                    initView(britain, american, data, explain, array2.length());
+                                }
+
+                            } else {
+                                Intent intent = new Intent(WordActivity.this, NotFindActivity.class);
+                                startActivity(intent);
                             }
                         }
 
@@ -100,10 +124,16 @@ public class WordActivity extends AppCompatActivity {
         });
     }
 
-    private void initView(String britain,String american,String data){
-        TextView textData = (TextView)findViewById(R.id.txt_word_result);
-        TextView textBritain = (TextView)findViewById(R.id.txt_word_pronunciation_britain);
-        TextView textAmerican = (TextView)findViewById(R.id.txt_word_pronunciation_american);
+    private void initView(String britain, String american, String data, String[] explain, int num) {
+        TextView textData = (TextView) findViewById(R.id.txt_word_result);
+        TextView textBritain = (TextView) findViewById(R.id.txt_word_pronunciation_britain);
+        TextView textAmerican = (TextView) findViewById(R.id.txt_word_pronunciation_american);
+        TextView textView = (TextView) findViewById(R.id.txt_word_mean);
+        String content = explain[0];
+        for (int i = 1; i < num; i++) {
+            content = content + "\n" + explain[i];
+        }
+        textView.setText(content);
         textBritain.setText(britain);
         textAmerican.setText(american);
         textData.setText(data);

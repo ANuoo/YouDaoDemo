@@ -7,19 +7,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_dictionary_column_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
             android:text="@string/txt_dictionary_column_top"
             android:textColor="@color/colorHomeSelectOff"
             android:textSize="14sp" />
+
         <TableLayout
             android:id="@+id/table_dictionary_column_top"
             android:layout_width="match_parent"
@@ -28,42 +29,42 @@
 
             <TableRow
                 android:id="@+id/table_dictionary_column_top_first"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_weight="1"
                 android:padding="3dp">
 
                 <Button
                     android:id="@+id/but_dictionary_column_OneSentence"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_one_sentence"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_one_sentence"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_Foreigners"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_foreigners"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_foreigners"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_Morning"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_morning"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_morning"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
 
             <TableRow
@@ -72,37 +73,38 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:padding="3dp">
+
                 <Button
                     android:id="@+id/but_dictionary_column_Welfare"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_welfare"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_welfare"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_Life"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:text="@string/but_dictionary_column_life"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_life"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_Idol"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_idol"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_idol"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
 
             <TableRow
@@ -111,37 +113,38 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:padding="3dp">
+
                 <Button
                     android:id="@+id/but_dictionary_column_Cartoon"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_cartoon"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_cartoon"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_Research"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_research"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_research"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_SelfStudy"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_self_study"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_self_study"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
         </TableLayout>
 
@@ -149,11 +152,11 @@
             android:id="@+id/txt_dictionary_column_anecdote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
             android:text="@string/txt_dictionary_column_anecdote"
             android:textColor="@color/colorHomeSelectOff"
-            android:textSize="14sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="5dp"/>
+            android:textSize="14sp" />
 
         <TableLayout
             android:id="@+id/table_dictionary_column_anecdote"
@@ -167,37 +170,38 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:padding="3dp">
+
                 <Button
                     android:id="@+id/but_dictionary_column_relaxed"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_relaxed"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_relaxed"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_world"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_world"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_world"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_fresh"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_fresh"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_fresh"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
 
             <TableRow
@@ -209,35 +213,35 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_originality"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_originality"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_originality"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_masses"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_masses"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_masses"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_crops"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_crops"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_crops"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
         </TableLayout>
 
@@ -248,8 +252,8 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="10dp"
             android:text="@string/txt_dictionary_column_foreigner"
-            android:textSize="14sp"
-            android:textColor="@color/colorHomeSelectOff"/>
+            android:textColor="@color/colorHomeSelectOff"
+            android:textSize="14sp" />
 
         <TableLayout
             android:id="@+id/table_dictionary_column_foreigner"
@@ -266,35 +270,35 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_show"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_show"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_show"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_omg"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_omg"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_omg"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_interview"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_interview"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_interview"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
         </TableLayout>
 
@@ -306,7 +310,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/txt_dictionary_column_movies"
             android:textColor="@color/colorHomeSelectOff"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
         <TableLayout
             android:id="@+id/table_dictionary_column_movies"
@@ -323,32 +327,32 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_music"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_music"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_music"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_time"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_time"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_time"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:background="@color/colorBackgroundDictionaryColumn"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:background="@color/colorBackgroundDictionaryColumn" />
             </TableRow>
         </TableLayout>
 
@@ -356,11 +360,11 @@
             android:id="@+id/txt_dictionary_column_culture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
             android:text="@string/txt_dictionary_column_culture"
             android:textColor="@color/colorHomeSelectOff"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
         <TableLayout
             android:id="@+id/table_dictionary_column_culture"
@@ -377,35 +381,35 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_course"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_course"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_course"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_earlier"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_earlier"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_earlier"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_intensive"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_intensive"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_intensive"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
 
             <TableRow
@@ -417,22 +421,22 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_child"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_child"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_child"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="2"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:background="@color/colorBackgroundDictionaryColumn"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:layout_weight="2"
+                    android:background="@color/colorBackgroundDictionaryColumn" />
             </TableRow>
         </TableLayout>
 
@@ -461,35 +465,35 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_bilingual"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_bilingual"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_bilingual"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_reading"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_reading"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_reading"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_english_reading"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_english_reading"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_english_reading"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
             </TableRow>
 
             <TableRow
@@ -501,32 +505,32 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_breakfast"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_breakfast"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_breakfast"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_story"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_story"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_story"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:background="@color/colorBackgroundDictionaryColumn"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:background="@color/colorBackgroundDictionaryColumn" />
             </TableRow>
         </TableLayout>
 
@@ -538,7 +542,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/txt_dictionary_column_examination"
             android:textColor="@color/colorHomeSelectOff"
-            android:textSize="14sp"/>
+            android:textSize="14sp" />
 
         <TableLayout
             android:id="@+id/table_dictionary_column_examination"
@@ -555,35 +559,35 @@
 
                 <Button
                     android:id="@+id/but_dictionary_column_interesting"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_interesting"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_interesting"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_postgraduate"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="@string/but_dictionary_column_postgraduate"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
+                    android:layout_weight="1"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_postgraduate"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
                 <Button
                     android:id="@+id/but_dictionary_column_material"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:text="@string/but_dictionary_column_material"
-                    android:textColor="@color/colorDictionaryRecommendTitle"
                     android:background="@drawable/background_dictionary_column_button"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:text="@string/but_dictionary_column_material"
+                    android:textColor="@color/colorDictionaryRecommendTitle" />
 
             </TableRow>
 

@@ -21,7 +21,7 @@ public class DiffItemsAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     private List<IData> listDatas;
     private Context mContext;
 
-    public DiffItemsAdapter(Context context,List<IData> listDatas){
+    public DiffItemsAdapter(Context context, List<IData> listDatas) {
         this.listDatas = listDatas;
         this.mContext = context;
     }
@@ -30,7 +30,7 @@ public class DiffItemsAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     @Override
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         BaseViewHolder viewHolder = null;
-        switch (i){
+        switch (i) {
             case RecycleItemTypeConstant.RECYCLEVIEW_ITEM_TYPE_1:
                 viewHolder = onCreateViewHolderOne(viewGroup);
                 break;
@@ -38,37 +38,37 @@ public class DiffItemsAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                 viewHolder = onCreateViewHolderTwo(viewGroup);
                 break;
             case RecycleItemTypeConstant.RECYCLEVIEW_ITEM_TYPE_3:
-                    break;
-                default:
-                    viewHolder = onCreateDefaultViewHolder(viewGroup);
-                    break;
+                break;
+            default:
+                viewHolder = onCreateDefaultViewHolder(viewGroup);
+                break;
         }
         return viewHolder;
     }
 
-    private BaseViewHolder onCreateDefaultViewHolder(ViewGroup viewGroup){
+    private BaseViewHolder onCreateDefaultViewHolder(ViewGroup viewGroup) {
         TextView textView = new TextView(mContext);
         BaseViewHolder holder = new BaseViewHolder(textView);
         return holder;
     }
 
-    private BaseViewHolder onCreateViewHolderOne(ViewGroup viewGroup){
-        View itemView = LayoutInflater.from(mContext).inflate(R.layout.dictionary_recommend_recycleview_news,viewGroup,false);
-        ViewHolderOne viewHolderOne=  new ViewHolderOne(itemView);
+    private BaseViewHolder onCreateViewHolderOne(ViewGroup viewGroup) {
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.dictionary_recommend_recycleview_news, viewGroup, false);
+        ViewHolderOne viewHolderOne = new ViewHolderOne(itemView);
         return viewHolderOne;
     }
 
-    private BaseViewHolder onCreateViewHolderTwo(ViewGroup viewGroup){
-        View itemView = LayoutInflater.from(mContext).inflate(R.layout.dictionary_recommend_recycleview_advantage,viewGroup,false);
+    private BaseViewHolder onCreateViewHolderTwo(ViewGroup viewGroup) {
+        View itemView = LayoutInflater.from(mContext).inflate(R.layout.dictionary_recommend_recycleview_advantage, viewGroup, false);
         ViewHolderTwo viewHolderTwo = new ViewHolderTwo(itemView);
         return viewHolderTwo;
     }
 
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder baseViewHolder, int i) {
-        try{
+        try {
             baseViewHolder.FillView(listDatas.get(i));
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -80,7 +80,7 @@ public class DiffItemsAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        if(position<0||position>listDatas.size()-1){
+        if (position < 0 || position > listDatas.size() - 1) {
             return -1;
         }
         return listDatas.get(position).typ();

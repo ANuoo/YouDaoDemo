@@ -11,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.anuo.youdao.adapter.AutoPullAdapter;
 import com.example.anuo.youdao.adapter.CourseChoiceAdapter;
@@ -50,20 +52,14 @@ public class FragmentCourse extends Fragment implements View.OnClickListener {
     public RecyclerView recyclerViewSelect;
     private List<CourseSelectView> courseSelectViewList = new ArrayList<CourseSelectView>();
 
-//    private Handler timehandler = new Handler();
-//     Runnable runnable = new Runnable() {
-//        @Override
-//        public void run() {
-//            recyclerView.scrollTo(350,0);
-//            timehandler.postDelayed(this,1000);
-//        }
-//    };
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view == null) {
             view = inflater.inflate(R.layout.fragment_course, container, false);
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getActivity().getResources().getColor(R.color.colorDictionaryFollowTopTitle));
             initEndlessData();
         }
         return view;

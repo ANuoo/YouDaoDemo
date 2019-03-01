@@ -9,8 +9,8 @@ import android.view.ViewConfiguration;
 import java.lang.ref.WeakReference;
 
 public class AutoPullRecycleView extends RecyclerView {
-    private static final  long TIME_AUTO_PULL = 16;
-    private static final  long TIME_AUTO_PULL_ONE = 2000;
+    private static final long TIME_AUTO_PULL = 16;
+    private static final long TIME_AUTO_PULL_ONE = 2000;
     AutoPullTask autoPullTask;
     AutoPullTaskOne autoPullTaskOne;
     private int index = 0;
@@ -18,58 +18,58 @@ public class AutoPullRecycleView extends RecyclerView {
     private boolean canRun;
     private final int mTouchSlop;
 
-    public AutoPullRecycleView(Context context, AttributeSet attributeSet){
-        super(context,attributeSet);
+    public AutoPullRecycleView(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
 
         autoPullTask = new AutoPullTask(this);
         autoPullTaskOne = new AutoPullTaskOne(this);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
     }
 
-    static class AutoPullTask implements Runnable{
+    static class AutoPullTask implements Runnable {
         private final WeakReference<AutoPullRecycleView> mReference;
 
-        public AutoPullTask(AutoPullRecycleView recycleView){
+        public AutoPullTask(AutoPullRecycleView recycleView) {
             this.mReference = new WeakReference<AutoPullRecycleView>(recycleView);
         }
 
         @Override
         public void run() {
             AutoPullRecycleView autoPullRecycleView = mReference.get();
-            if(autoPullRecycleView != null && autoPullRecycleView.running&&autoPullRecycleView.canRun){
-                autoPullRecycleView.scrollBy(2,2);
-                autoPullRecycleView.postDelayed(autoPullRecycleView.autoPullTask,autoPullRecycleView.TIME_AUTO_PULL);
+            if (autoPullRecycleView != null && autoPullRecycleView.running && autoPullRecycleView.canRun) {
+                autoPullRecycleView.scrollBy(2, 2);
+                autoPullRecycleView.postDelayed(autoPullRecycleView.autoPullTask, autoPullRecycleView.TIME_AUTO_PULL);
 
             }
         }
     }
 
-    static class AutoPullTaskOne implements Runnable{
+    static class AutoPullTaskOne implements Runnable {
         private final WeakReference<AutoPullRecycleView> mReference;
 
-        public AutoPullTaskOne(AutoPullRecycleView recycleView){
+        public AutoPullTaskOne(AutoPullRecycleView recycleView) {
             this.mReference = new WeakReference<AutoPullRecycleView>(recycleView);
         }
 
         @Override
         public void run() {
             AutoPullRecycleView autoPullRecycleView = mReference.get();
-            if(autoPullRecycleView != null && autoPullRecycleView.running && autoPullRecycleView.canRun){
+            if (autoPullRecycleView != null && autoPullRecycleView.running && autoPullRecycleView.canRun) {
                 autoPullRecycleView.smoothScrollToPosition(++autoPullRecycleView.index);
-                autoPullRecycleView.postDelayed(autoPullRecycleView.autoPullTaskOne,TIME_AUTO_PULL_ONE);
+                autoPullRecycleView.postDelayed(autoPullRecycleView.autoPullTaskOne, TIME_AUTO_PULL_ONE);
             }
         }
     }
 
-    public void start(){
-        if(running)
+    public void start() {
+        if (running)
             stop();
         canRun = true;
         running = true;
-        postDelayed(autoPullTaskOne,TIME_AUTO_PULL_ONE);
+        postDelayed(autoPullTaskOne, TIME_AUTO_PULL_ONE);
     }
 
-    public void stop(){
+    public void stop() {
         running = false;
         removeCallbacks(autoPullTaskOne);
     }
@@ -79,24 +79,24 @@ public class AutoPullRecycleView extends RecyclerView {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         int action = ev.getAction();
-        switch (action){
+        switch (action) {
             case MotionEvent.ACTION_DOWN:
-                lastX = (int)ev.getRawX();
+                lastX = (int) ev.getRawX();
                 if (running)
                     stop();
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_OUTSIDE:
-                int nowX = (int)ev.getRawX();
-                if(nowX - lastX > mTouchSlop){
-                    smoothScrollToPosition(index==0?0:--index);
-                    if(canRun)
+                int nowX = (int) ev.getRawX();
+                if (nowX - lastX > mTouchSlop) {
+                    smoothScrollToPosition(index == 0 ? 0 : --index);
+                    if (canRun)
                         start();
                     return true;
-                }else if(lastX - nowX >mTouchSlop){
+                } else if (lastX - nowX > mTouchSlop) {
                     smoothScrollToPosition(++index);
-                    if(canRun)
+                    if (canRun)
                         start();
                     return true;
                 }

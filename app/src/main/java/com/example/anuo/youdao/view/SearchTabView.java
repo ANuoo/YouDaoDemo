@@ -2,7 +2,8 @@ package com.example.anuo.youdao.view;
 
 public class SearchTabView {
     private String text;
-    public SearchTabView(String text){
+
+    public SearchTabView(String text) {
         this.text = text;
     }
 

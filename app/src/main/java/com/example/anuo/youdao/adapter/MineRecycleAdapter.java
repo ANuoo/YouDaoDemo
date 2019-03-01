@@ -17,20 +17,20 @@ public class MineRecycleAdapter extends RecyclerView.Adapter<MineRecycleAdapter.
     private Context context;
     private List<MineRecycle> mineRecycleList;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textView;
         TextView mtextView;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             super(view);
-            imageView = (ImageView)view.findViewById(R.id.img_mine_list);
-            textView = (TextView)view.findViewById(R.id.txt_mine_list_name);
-            mtextView = (TextView)view.findViewById(R.id.txt_mine_list_mark);
+            imageView = (ImageView) view.findViewById(R.id.img_mine_list);
+            textView = (TextView) view.findViewById(R.id.txt_mine_list_name);
+            mtextView = (TextView) view.findViewById(R.id.txt_mine_list_mark);
         }
     }
 
-    public MineRecycleAdapter(Context context,List<MineRecycle> mineRecycles){
+    public MineRecycleAdapter(Context context, List<MineRecycle> mineRecycles) {
         this.context = context;
         this.mineRecycleList = mineRecycles;
     }
@@ -38,7 +38,7 @@ public class MineRecycleAdapter extends RecyclerView.Adapter<MineRecycleAdapter.
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = View.inflate(context,R.layout.mine_recycleview,null);
+        View view = View.inflate(context, R.layout.mine_recycleview, null);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

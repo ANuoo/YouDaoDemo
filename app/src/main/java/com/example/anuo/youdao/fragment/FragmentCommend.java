@@ -37,8 +37,8 @@ public class FragmentCommend extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if(view == null){
-            view = inflater.inflate(R.layout.fragment_dictionary_recommend,container,false);
+        if (view == null) {
+            view = inflater.inflate(R.layout.fragment_dictionary_recommend, container, false);
             initView();
             initData();
             initItem(view);
@@ -46,32 +46,34 @@ public class FragmentCommend extends Fragment implements View.OnClickListener {
         return view;
     }
 
-    private void initView(){
-        DictionaryTodayView one = new DictionaryTodayView(R.drawable.dictionary_recommend_today_picture_one,"百句英语语法拯救你的期末考","英语学习干货","10531人已报名");
+    private void initView() {
+        DictionaryTodayView one = new DictionaryTodayView(R.drawable.dictionary_recommend_today_picture_one, "百句英语语法拯救你的期末考", "英语学习干货", "10531人已报名");
         dictionaryTodayViewList.add(one);
-        DictionaryTodayView two = new DictionaryTodayView(R.drawable.explore_roll_item_three,"高考物理十大经典例题","新高三必备","1098人已报名");
+        DictionaryTodayView two = new DictionaryTodayView(R.drawable.explore_roll_item_three, "高考物理十大经典例题", "新高三必备", "1098人已报名");
         dictionaryTodayViewList.add(two);
-        DictionaryTodayView three = new DictionaryTodayView(R.drawable.explore_roll_item_one,"考前必看化学方程式","新高三必备","234人已报名");
+        DictionaryTodayView three = new DictionaryTodayView(R.drawable.explore_roll_item_one, "考前必看化学方程式", "新高三必备", "234人已报名");
         dictionaryTodayViewList.add(three);
         recyclerViewToday = view.findViewById(R.id.recycle_dictionary_recommend_today);
-        LinearLayoutManager linearLayoutManager1= new LinearLayoutManager(getContext());
+        LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewToday.setLayoutManager(linearLayoutManager1);
-        dictionaryTodayAdapter = new DictionaryTodayAdapter(getActivity(),dictionaryTodayViewList);
+        dictionaryTodayAdapter = new DictionaryTodayAdapter(getActivity(), dictionaryTodayViewList);
         recyclerViewToday.setAdapter(dictionaryTodayAdapter);
         recyclerViewToday.addItemDecoration(new SpaceItemDecoration(20));
     }
-    private void initItem(View view){
+
+    private void initItem(View view) {
         recyclerView = view.findViewById(R.id.recycle_dictionary_recommend);
         linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        diffItemsAdapter = new DiffItemsAdapter(getActivity(),datas);
+        diffItemsAdapter = new DiffItemsAdapter(getActivity(), datas);
         recyclerView.setAdapter(diffItemsAdapter);
     }
-    private void initData(){
+
+    private void initData() {
         datas = new ArrayList<>();
-        for(int i = 0;i<20;i++){
+        for (int i = 0; i < 20; i++) {
             InfoOne infoOne = new InfoOne();
             infoOne.setTitle("可爱即是正义！不得不说的一分钟超甜治愈向混剪");
             infoOne.setMark("我的视界 2.3万浏览");

@@ -9,12 +9,12 @@ import java.util.List;
 public class FragmentAdapter extends FragmentPagerAdapter {
     private List<Fragment> list;
 
-    public FragmentAdapter(FragmentManager fragmentManager){
+    public FragmentAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
 
     }
 
-    public FragmentAdapter(FragmentManager fragmentManager,List<Fragment> list){
+    public FragmentAdapter(FragmentManager fragmentManager, List<Fragment> list) {
         super(fragmentManager);
         this.list = list;
     }

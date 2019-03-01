@@ -36,378 +36,379 @@
 
     </android.support.v7.widget.Toolbar>
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@id/toolbar_course">
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycle_course_endless"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.6dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_below="@id/recycle_course_endless"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorExploreLine" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycle_course_choise"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recycle_course_endless"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.6dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_below="@id/recycle_course_choise"
-        android:layout_marginTop="1dp"
-        android:background="@color/colorExploreLine" />
-
-
-   <FrameLayout
-       android:id="@+id/frame_course_live"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/recycle_course_choise"
-       android:layout_marginTop="10dp"
-       android:layout_marginStart="10dp"
-       android:layout_marginEnd="10dp">
-
-       <ImageView
-           android:id="@+id/img_course_live_background"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:scaleType="centerCrop"
-           android:src="@drawable/course_components_live_background"
-           android:contentDescription="@string/img_course_live_background"/>
-
-       <ImageView
-           android:id="@+id/img_course_live_icon"
-           android:layout_width="18dp"
-           android:layout_height="18dp"
-           android:contentDescription="@string/img_course_live_icon"
-           android:src="@drawable/course_components_live"
-           android:layout_gravity="start|center_vertical"
-           android:layout_marginStart="8dp" />
-       <TextView
-           android:id="@+id/txt_course_live_former"
-           android:layout_width="35dp"
-           android:layout_height="18dp"
-           android:layout_marginStart="48dp"
-           android:layout_marginTop="8dp"
-           android:textSize="14sp"
-           android:textStyle="bold"
-           android:text="@string/txt_course_live_former_top"
-           android:textColor="@color/colorCourseLiveTextFormer"/>
-
-       <TextView
-           android:id="@+id/txt_course_live_below"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="48dp"
-           android:layout_marginTop="23dp"
-           android:textSize="14sp"
-           android:textStyle="bold"
-           android:text="@string/txt_course_live_former_below"
-           android:textColor="@color/colorCourseLiveTextFormer"/>
-
-       <TextView
-           android:id="@+id/txt_course_live_latter"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="end"
-           android:layout_marginEnd="90dp"
-           android:layout_marginTop="14dp"
-           android:textSize="13sp"
-           android:text="@string/txt_course_live_latter"
-           android:textColor="@color/colorCourseLiveTextLatter"/>
-
-       <ImageView
-           android:id="@+id/img_course_live_button"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="end"
-           android:contentDescription="@string/img_course_live_button"
-           android:layout_marginTop="11dp"
-           android:layout_marginEnd="5dp"
-           android:src="@drawable/course_components_watch_button"/>
-
-   </FrameLayout>
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="8dp"
-        android:layout_below="@+id/frame_course_live"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorCourseShadowLine"/>
-
-
-    <FrameLayout
-        android:id="@+id/frame_course_recommend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/frame_course_live"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
-
-        <TextView
-            android:id="@+id/txt_course_recommend_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="start"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textColor="@color/colorCourseRecommendTextTitle"
-            android:text="@string/txt_course_recommend_title"/>
-
-        <TextView
-            android:id="@+id/txt_course_recommend_more_mark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="25dp"
-            android:textColor="@color/colorCourseRecommendText"
-            android:text="@string/txt_course_recommend_more"
-            android:textSize="13sp"/>
-
-        <ImageView
-            android:id="@+id/img_course_skip_arrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/img_course_skip_arrow"
-            android:src="@drawable/course_components_skip_arrow"
-            android:layout_gravity="end"
-            android:layout_marginTop="13dp"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycle_course_recommend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="45dp">
-
-        </android.support.v7.widget.RecyclerView>
-    </FrameLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="8dp"
-            android:layout_below="@+id/frame_course_recommend"
-            android:background="@color/colorCourseShadowLine"/>
-
-        <FrameLayout
-            android:id="@+id/frame_course_guidance"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frame_course_recommend"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/txt_course_guidance_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="15dp"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/colorCourseRecommendTextTitle"
-                android:text="@string/txt_course_guidance"/>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycle_course_guidance"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="45dp">
-
-            </android.support.v7.widget.RecyclerView>
-        </FrameLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="8dp"
-            android:layout_below="@+id/frame_course_guidance"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorCourseShadowLine"/>
-
-        <FrameLayout
-            android:id="@+id/frame_course_select"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/frame_course_guidance"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp">
-
-            <TextView
-                android:id="@+id/txt_course_select_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="start"
-                android:text="@string/txt_course_select_title"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/colorCourseRecommendTextTitle"/>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycle_course_select"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginTop="60dp"
-                android:layout_gravity="bottom">
-
-            </android.support.v7.widget.RecyclerView>
-        </FrameLayout>
-
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="8dp"
-            android:layout_below="@+id/frame_course_select"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorCourseShadowLine"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_course">
 
         <RelativeLayout
-            android:id="@+id/relative_course_radio"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/frame_course_select"
-            android:layout_marginTop="30dp">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/txt_course_radio_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/txt_course_radio_title"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:textColor="@color/colorCourseRecommendTextTitle"/>
-
-            <TextView
-                android:id="@+id/txt_course_radio_title_mark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="240dp"
-                android:textColor="@color/colorCourseRecommendText"
-                android:textSize="13sp"
-                android:text="@string/txt_course_radio_title_mark"
-                android:layout_toEndOf="@+id/txt_course_radio_title"
-                android:drawableEnd="@drawable/course_components_refresh"
-                android:drawablePadding="5dp"
-                android:padding="4dp"/>
-
-            <com.example.anuo.youdao.view.RoundImageView
-                android:id="@+id/img_course_radio_picture"
-                android:layout_width="390dp"
-                android:layout_height="140dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:scaleType="centerCrop"
-                android:layout_below="@+id/txt_course_radio_title"
-                android:layout_marginTop="20dp"
-                android:contentDescription="@string/img_course_radio_picture"
-                android:src = "@drawable/explore_roll_item_four"/>
-
-            <TextView
-                android:id="@+id/txt_course_radio_list_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_below="@+id/img_course_radio_picture"
-                android:text="@string/txt_course_radio_list_title"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:textColor="@color/colorCourseRecommendTextTitle"
-                android:lines="1"
-                android:singleLine="true" />
-
-            <ImageView
-                android:id="@+id/img_course_radio_line"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:contentDescription="@string/img_course_radio_line"
-                android:src ="@drawable/course_components_dash"
-                android:layout_toEndOf="@+id/txt_course_radio_list_title"
-                android:layout_below="@id/img_course_radio_picture"
-                android:layout_marginStart="150dp"/>
-
-            <ImageView
-                android:id="@+id/img_course_radio_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:layout_marginStart="10dp"
-                android:scaleType="centerCrop"
-                android:contentDescription="@string/img_course_radio_button"
-                android:layout_toEndOf="@+id/img_course_radio_line"
-                android:layout_below="@id/img_course_radio_picture"
-                android:src="@drawable/course_components_btn_play"/>
-
-            <TextView
-                android:id="@+id/txt_course_radio_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_course_radio_list_title"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                android:text="@string/txt_course_radio_time"
-                android:drawablePadding="5dp"
-                android:textSize="13sp"
-                android:textColor="@color/colorCourseRecommendText"
-                android:drawableStart="@drawable/course_components_audio_study_icon" />
-
-            <TextView
-                android:id="@+id/txt_course_radio_listen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_course_radio_list_title"
-                android:layout_toEndOf="@+id/txt_course_radio_time"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:drawableStart="@drawable/course_components_audio_play"
-                android:drawablePadding="5dp"
-                android:text="@string/txt_course_radio_listen"
-                android:textSize="13sp"
-                android:textColor="@color/colorCourseRecommendText" />
-
-            <ImageView
-                android:id="@+id/img_course_radio_picture_final"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_course_endless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/img_course_radio_picture_final"
-                android:src = "@drawable/course_big_image_card_default"
-                android:scaleType="centerCrop"
-                android:layout_below="@+id/txt_course_radio_time"
-                android:layout_marginTop="20dp" />
-        </RelativeLayout>
+                android:layout_marginTop="0dp"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
-    </RelativeLayout>
-</ScrollView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@id/recycle_course_endless"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorExploreLine" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_course_choise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycle_course_endless"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:layout_below="@id/recycle_course_choise"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorExploreLine" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_course_live"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recycle_course_choise"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/img_course_live_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/img_course_live_background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/course_components_live_background" />
+
+                <ImageView
+                    android:id="@+id/img_course_live_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/img_course_live_icon"
+                    android:src="@drawable/course_components_live" />
+
+                <TextView
+                    android:id="@+id/txt_course_live_former"
+                    android:layout_width="35dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/txt_course_live_former_top"
+                    android:textColor="@color/colorCourseLiveTextFormer"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_course_live_below"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="23dp"
+                    android:text="@string/txt_course_live_former_below"
+                    android:textColor="@color/colorCourseLiveTextFormer"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_course_live_latter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="90dp"
+                    android:text="@string/txt_course_live_latter"
+                    android:textColor="@color/colorCourseLiveTextLatter"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_course_live_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/img_course_live_button"
+                    android:src="@drawable/course_components_watch_button" />
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_below="@+id/frame_course_live"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorCourseShadowLine" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_course_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_course_live"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:id="@+id/txt_course_recommend_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txt_course_recommend_title"
+                    android:textColor="@color/colorCourseRecommendTextTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_course_recommend_more_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/txt_course_recommend_more"
+                    android:textColor="@color/colorCourseRecommendText"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_course_skip_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="13dp"
+                    android:contentDescription="@string/img_course_skip_arrow"
+                    android:src="@drawable/course_components_skip_arrow" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_course_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="45dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_below="@+id/frame_course_recommend"
+                android:background="@color/colorCourseShadowLine" />
+
+            <FrameLayout
+                android:id="@+id/frame_course_guidance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_course_recommend"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txt_course_guidance_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txt_course_guidance"
+                    android:textColor="@color/colorCourseRecommendTextTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_course_guidance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="45dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_below="@+id/frame_course_guidance"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorCourseShadowLine" />
+
+            <FrameLayout
+                android:id="@+id/frame_course_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/frame_course_guidance"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:id="@+id/txt_course_select_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/txt_course_select_title"
+                    android:textColor="@color/colorCourseRecommendTextTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_course_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </FrameLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_below="@+id/frame_course_select"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorCourseShadowLine" />
+
+            <RelativeLayout
+                android:id="@+id/relative_course_radio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frame_course_select"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/txt_course_radio_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txt_course_radio_title"
+                    android:textColor="@color/colorCourseRecommendTextTitle"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_course_radio_title_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/txt_course_radio_title"
+                    android:drawableEnd="@drawable/course_components_refresh"
+                    android:drawablePadding="5dp"
+                    android:padding="4dp"
+                    android:text="@string/txt_course_radio_title_mark"
+                    android:textColor="@color/colorCourseRecommendText"
+                    android:textSize="13sp" />
+
+                <com.example.anuo.youdao.view.RoundImageView
+                    android:id="@+id/img_course_radio_picture"
+                    android:layout_width="390dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@+id/txt_course_radio_title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/img_course_radio_picture"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/explore_roll_item_four" />
+
+                <TextView
+                    android:id="@+id/txt_course_radio_list_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_course_radio_picture"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:text="@string/txt_course_radio_list_title"
+                    android:textColor="@color/colorCourseRecommendTextTitle"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_course_radio_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_course_radio_picture"
+                    android:layout_marginStart="150dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@+id/txt_course_radio_list_title"
+                    android:contentDescription="@string/img_course_radio_line"
+                    android:src="@drawable/course_components_dash" />
+
+                <ImageView
+                    android:id="@+id/img_course_radio_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/img_course_radio_picture"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_toEndOf="@+id/img_course_radio_line"
+                    android:contentDescription="@string/img_course_radio_button"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/course_components_btn_play" />
+
+                <TextView
+                    android:id="@+id/txt_course_radio_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_course_radio_list_title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/course_components_audio_study_icon"
+                    android:drawablePadding="5dp"
+                    android:text="@string/txt_course_radio_time"
+                    android:textColor="@color/colorCourseRecommendText"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt_course_radio_listen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_course_radio_list_title"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/txt_course_radio_time"
+                    android:drawableStart="@drawable/course_components_audio_play"
+                    android:drawablePadding="5dp"
+                    android:text="@string/txt_course_radio_listen"
+                    android:textColor="@color/colorCourseRecommendText"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/img_course_radio_picture_final"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_course_radio_time"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@string/img_course_radio_picture_final"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/course_big_image_card_default" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

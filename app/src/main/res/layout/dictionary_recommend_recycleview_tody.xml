@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_width="340dp"
     android:layout_height="85dp"
     android:layout_marginStart="10dp"
+    android:orientation="horizontal"
     app:cardCornerRadius="5dp"
     app:cardElevation="10dp">
 
@@ -13,8 +12,8 @@
         android:id="@+id/img_dictionary_recommend_today"
         android:layout_width="70dp"
         android:layout_height="85dp"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/img_dictionary_recommend_today"/>
+        android:contentDescription="@string/img_dictionary_recommend_today"
+        android:scaleType="centerCrop" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -24,13 +23,13 @@
             android:id="@+id/txt_dictionary_recommend_today_card_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
             android:layout_marginStart="85dp"
-            android:textSize="17sp"
-            android:textColor="@color/colorDictionaryRecommendTitle"
+            android:layout_marginTop="12dp"
             android:lines="1"
             android:maxEms="8"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:textColor="@color/colorDictionaryRecommendTitle"
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/txt_dictionary_recommend_today_card_title_mark"
@@ -39,12 +38,12 @@
             android:layout_below="@id/txt_dictionary_recommend_today_card_title"
             android:layout_marginStart="85dp"
             android:layout_marginTop="4dp"
-            android:textSize="15sp"
-            android:textColor="@color/colorDictionaryRecommendTodayTitleMark"
             android:background="@color/colorBackgroundDictionaryTodayTitleMark"
             android:paddingStart="2dp"
+            android:paddingTop="3dp"
             android:paddingEnd="2dp"
-            android:paddingTop="3dp"/>
+            android:textColor="@color/colorDictionaryRecommendTodayTitleMark"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/txt_dictionary_recommend_today_card_number"
@@ -53,24 +52,24 @@
             android:layout_below="@id/txt_dictionary_recommend_today_card_title_mark"
             android:layout_marginStart="85dp"
             android:layout_marginTop="5dp"
-            android:textSize="13sp"
-            android:textColor="@color/colorDictionaryRecommendMark" />
+            android:textColor="@color/colorDictionaryRecommendMark"
+            android:textSize="13sp" />
 
         <TextView
             android:id="@+id/txt_dictionary_recommend_today_card_mark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="38dp"
             android:layout_toEndOf="@id/txt_dictionary_recommend_today_card_title_mark"
-            android:layout_marginStart="10dp"
-            android:text="@string/txt_dictionary_recommend_today_card_mark"
-            android:textSize="16sp"
-            android:textColor="@color/colorDictionaryRecommendTodayMark"
             android:background="@drawable/background_dictionary_recommend_today_mark"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp"
             android:paddingTop="3dp"
-            android:paddingBottom="3dp"/>
+            android:paddingEnd="10dp"
+            android:paddingBottom="3dp"
+            android:text="@string/txt_dictionary_recommend_today_card_mark"
+            android:textColor="@color/colorDictionaryRecommendTodayMark"
+            android:textSize="16sp" />
 
     </RelativeLayout>
 

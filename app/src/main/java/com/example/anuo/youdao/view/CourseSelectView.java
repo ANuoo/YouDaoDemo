@@ -8,7 +8,7 @@ public class CourseSelectView {
     private String name;
     private String mark;
 
-    public CourseSelectView(int imageId,String titleMark,String title,String time,String name,String mark){
+    public CourseSelectView(int imageId, String titleMark, String title, String time, String name, String mark) {
         this.imageId = imageId;
         this.title = title;
         this.titleMark = titleMark;

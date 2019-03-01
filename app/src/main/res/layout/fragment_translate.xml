@@ -1,128 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txt_translate_language_former"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="15dp"
-        android:text="@string/txt_translate_language_former"
-        android:textColor="#000000"
-        android:textSize="14sp"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linear_translate_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/img_translate_language_down"
-        android:contentDescription="@string/txt_translate_language_down"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="19dp"
-        android:layout_toEndOf="@id/txt_translate_language_former"
-        android:src="@drawable/translate_language" />
+        <TextView
+            android:id="@+id/txt_translate_language_former"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/txt_translate_language_former"
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/but_translate_language_change"
-        android:layout_width="35dp"
-        android:layout_height="22dp"
-        android:background="@drawable/background_translate_change"
-        android:stateListAnimator="@null"
-        android:layout_marginTop="13dp"
-        android:layout_marginStart="78dp"
-        android:paddingBottom="1dp"
-        android:drawableTop="@drawable/translate_both_directions"/>
+        <ImageView
+            android:id="@+id/img_translate_language_down"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@id/txt_translate_language_former"
+            android:contentDescription="@string/txt_translate_language_down"
+            android:src="@drawable/translate_language" />
 
-    <TextView
-        android:id="@+id/txt_translate_language_latter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="138dp"
-        android:text="@string/txt_translate_language_latter"
-        android:textColor="#000000"
-        android:textSize="14sp"/>
+        <Button
+            android:id="@+id/but_translate_language_change"
+            android:layout_width="35dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="78dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/background_translate_change"
+            android:drawableTop="@drawable/translate_both_directions"
+            android:paddingBottom="1dp"
+            android:stateListAnimator="@null" />
 
-    <ImageView
-        android:id="@id/img_translate_language_down"
-        android:contentDescription="@string/txt_translate_language_down"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="19dp"
-        android:layout_toEndOf="@id/txt_translate_language_former"
-        android:src="@drawable/translate_language" />
+        <TextView
+            android:id="@+id/txt_translate_language_latter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="138dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/txt_translate_language_latter"
+            android:textColor="#000000"
+            android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/edt_translate_text"
-        android:layout_width="365dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="18dp"
-        android:layout_below="@id/txt_translate_language_former"
-        android:background="@null"
-        android:autofillHints="@string/edt_translate_text"
-        android:hint="@string/edt_translate_text"
-        android:textSize="22sp"
-        android:inputType="text"
-        android:singleLine="false"
-        android:maxLines="25"
-        android:textCursorDrawable="@drawable/background_translate_cursor"/>
+        <ImageView
+            android:id="@id/img_translate_language_down"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="122dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@id/txt_translate_language_former"
+            android:contentDescription="@string/txt_translate_language_down"
+            android:src="@drawable/translate_language" />
 
-    <Button
-        android:id="@+id/but_translate_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="65dp"
-        android:layout_below="@id/edt_translate_text"
-        android:background="@drawable/background_translate_button"
-        android:stateListAnimator="@null"
-        android:paddingStart="8dp"
-        android:paddingEnd="5dp"
-        android:text="@string/but_translate_camera"
-        android:textSize="12sp"
-        android:drawableStart="@drawable/translate_camera"/>
+        <EditText
+            android:id="@+id/edt_translate_text"
+            android:layout_width="365dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_translate_language_former"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints="@string/edt_translate_text"
+            android:background="@null"
+            android:hint="@string/edt_translate_text"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:singleLine="false"
+            android:textCursorDrawable="@drawable/background_translate_cursor"
+            android:textSize="22sp" />
 
-    <Button
-        android:id="@+id/btn_translate_conversation"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginStart="130dp"
-        android:layout_below="@id/edt_translate_text"
-        android:background="@drawable/background_translate_button"
-        android:stateListAnimator="@null"
-        android:paddingEnd="5dp"
-        android:paddingStart="8dp"
-        android:text="@string/but_translate_conversation"
-        android:textSize="12sp"
-        android:drawableStart="@drawable/translate_comment"/>
+        <Button
+            android:id="@+id/but_translate_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/edt_translate_text"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/background_translate_button"
+            android:drawableStart="@drawable/translate_camera"
+            android:paddingStart="8dp"
+            android:paddingEnd="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/but_translate_camera"
+            android:textSize="12sp" />
 
-    <ImageView
-        android:id="@+id/img_translate_line"
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop"
-        android:layout_below="@id/but_translate_camera"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="0dp"
-        android:contentDescription="@string/img_translate_line"
-        android:src="@drawable/translate_line_shadow" />
+        <Button
+            android:id="@+id/btn_translate_conversation"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/edt_translate_text"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/background_translate_button"
+            android:drawableStart="@drawable/translate_comment"
+            android:paddingStart="8dp"
+            android:paddingEnd="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/but_translate_conversation"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/img_translate_line"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/but_translate_camera"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="@string/img_translate_line"
+            android:scaleType="centerCrop"
+            android:src="@drawable/translate_line_shadow" />
+
+        <ImageView
+            android:id="@+id/img_translate_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_clear_all_gray_ke"
+            android:layout_marginTop="136dp"
+            android:background="@drawable/background_translate_button"
+            android:padding="14dp"
+            android:contentDescription="@string/img_not_find"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="100dp"/>
+
+        <ImageView
+            android:id="@+id/img_translate_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_black"
+            android:layout_marginTop="135dp"
+            android:background="@drawable/background_translate_button"
+            android:padding="10dp"
+            android:contentDescription="@string/img_not_find"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"/>
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/txt_translate_result"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="1dp"
-        android:layout_below="@id/img_translate_line"
-        android:text="@string/txt_translate_result"/>
-</RelativeLayout>
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="#000000"/>
+
+</LinearLayout>

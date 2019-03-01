@@ -13,22 +13,22 @@ import com.example.anuo.youdao.R;
 
 import java.util.List;
 
-public class AutoPullAdapter extends RecyclerView.Adapter<AutoPullAdapter.BaseViewHolder>{
+public class AutoPullAdapter extends RecyclerView.Adapter<AutoPullAdapter.BaseViewHolder> {
     private Context context;
     private List<CourseEndlessRecycle> listBeans;
 
-    public AutoPullAdapter(Context context,List<CourseEndlessRecycle> listBeans){
+    public AutoPullAdapter(Context context, List<CourseEndlessRecycle> listBeans) {
         this.context = context;
         this.listBeans = listBeans;
     }
 
-    static class BaseViewHolder extends RecyclerView.ViewHolder{
+    static class BaseViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textView;
         TextView textViewone;
         TextView textViewtwo;
 
-        public BaseViewHolder(View view){
+        public BaseViewHolder(View view) {
             super(view);
             imageView = view.findViewById(R.id.img_course_endless);
             textView = view.findViewById(R.id.txt_course_endless_title);
@@ -36,17 +36,18 @@ public class AutoPullAdapter extends RecyclerView.Adapter<AutoPullAdapter.BaseVi
             textViewtwo = view.findViewById(R.id.txt_course_endless_mark);
         }
     }
+
     @NonNull
     @Override
     public BaseViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = View.inflate(context,R.layout.course_recycleview_endless_item,null);
+        View view = View.inflate(context, R.layout.course_recycleview_endless_item, null);
         BaseViewHolder viewHolder = new BaseViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder baseViewHolder, int i) {
-        CourseEndlessRecycle courseEndlessRecycle = listBeans.get(i %listBeans.size());
+        CourseEndlessRecycle courseEndlessRecycle = listBeans.get(i % listBeans.size());
         baseViewHolder.imageView.setImageResource(courseEndlessRecycle.getImgId());
         baseViewHolder.textView.setText(courseEndlessRecycle.getTitle());
         baseViewHolder.textViewone.setText(courseEndlessRecycle.getMarkTitle());

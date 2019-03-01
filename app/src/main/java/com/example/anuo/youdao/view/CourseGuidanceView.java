@@ -5,7 +5,7 @@ public class CourseGuidanceView {
     private String title;
     private String mark;
 
-    public CourseGuidanceView(int imageId,String title,String mark){
+    public CourseGuidanceView(int imageId, String title, String mark) {
         this.imageId = imageId;
         this.title = title;
         this.mark = mark;

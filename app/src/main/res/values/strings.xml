@@ -141,4 +141,5 @@
     <string name="img_not_find_collection">img_not_find_collection</string>
     <string name="img_not_find_share">img_not_find_share</string>
     <string name="img_not_find">img_not_find</string>
+    <string name="txt_toast">再按一次退出有道</string>
 </resources>

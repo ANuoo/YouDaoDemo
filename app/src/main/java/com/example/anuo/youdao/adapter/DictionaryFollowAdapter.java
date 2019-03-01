@@ -17,22 +17,22 @@ public class DictionaryFollowAdapter extends RecyclerView.Adapter<DictionaryFoll
     private Context context;
     private List<DictionaryFollowView> list;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textTitle;
         TextView textTitleMark;
         TextView textnumber;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             super(view);
-            imageView = (ImageView)view.findViewById(R.id.img_dictionary_follow);
-            textTitle = (TextView)view.findViewById(R.id.txt_dictionary_follow_title);
-            textTitleMark = (TextView)view.findViewById(R.id.txt_dictionary_follow_title_mark);
-            textnumber = (TextView)view.findViewById(R.id.txt_dictionary_follow_number);
+            imageView = (ImageView) view.findViewById(R.id.img_dictionary_follow);
+            textTitle = (TextView) view.findViewById(R.id.txt_dictionary_follow_title);
+            textTitleMark = (TextView) view.findViewById(R.id.txt_dictionary_follow_title_mark);
+            textnumber = (TextView) view.findViewById(R.id.txt_dictionary_follow_number);
         }
     }
 
-    public DictionaryFollowAdapter(Context context,List<DictionaryFollowView> list){
+    public DictionaryFollowAdapter(Context context, List<DictionaryFollowView> list) {
         this.context = context;
         this.list = list;
     }
@@ -40,7 +40,7 @@ public class DictionaryFollowAdapter extends RecyclerView.Adapter<DictionaryFoll
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = View.inflate(context,R.layout.dictionary_recycleview_follow_item,null);
+        View view = View.inflate(context, R.layout.dictionary_recycleview_follow_item, null);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

@@ -45,5 +45,6 @@
     <color name="colorBackgroundSearch">#EFF0F2</color>
     <color name="colorSearchEditTxtStroke">#E0E0E0</color>
     <color name="colorBackgroundSearchList">#d1efa3a8</color>
-
+    <color name="colorToast">#d1656160</color>
+    <color name="colorStateBar">#87ffffff</color>
 </resources>

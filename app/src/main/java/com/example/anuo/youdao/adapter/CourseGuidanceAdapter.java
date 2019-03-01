@@ -17,7 +17,7 @@ public class CourseGuidanceAdapter extends RecyclerView.Adapter<CourseGuidanceAd
     private Context context;
     private List<CourseGuidanceView> courseGuidanceViewList;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         ImageView imageViewPlay;
         TextView textTitle;
@@ -25,7 +25,7 @@ public class CourseGuidanceAdapter extends RecyclerView.Adapter<CourseGuidanceAd
         ImageView imageViewMarkPlay;
         TextView textMark;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             super(view);
             imageView = view.findViewById(R.id.img_course_guidance_video);
             imageViewPlay = view.findViewById(R.id.img_course_guidance_video_button);
@@ -36,7 +36,7 @@ public class CourseGuidanceAdapter extends RecyclerView.Adapter<CourseGuidanceAd
         }
     }
 
-    public CourseGuidanceAdapter(Context context,List<CourseGuidanceView> courseGuidanceViews){
+    public CourseGuidanceAdapter(Context context, List<CourseGuidanceView> courseGuidanceViews) {
         this.context = context;
         courseGuidanceViewList = courseGuidanceViews;
     }
@@ -44,7 +44,7 @@ public class CourseGuidanceAdapter extends RecyclerView.Adapter<CourseGuidanceAd
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = View.inflate(context,R.layout.course_recycleview_guidance_item,null);
+        View view = View.inflate(context, R.layout.course_recycleview_guidance_item, null);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -52,7 +52,7 @@ public class CourseGuidanceAdapter extends RecyclerView.Adapter<CourseGuidanceAd
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         CourseGuidanceView courseGuidanceView = courseGuidanceViewList.get(i);
-        viewHolder.imageView .setImageResource(courseGuidanceView.getImageId());
+        viewHolder.imageView.setImageResource(courseGuidanceView.getImageId());
         viewHolder.textTitle.setText(courseGuidanceView.getTitle());
         viewHolder.textMark.setText(courseGuidanceView.getMark());
     }

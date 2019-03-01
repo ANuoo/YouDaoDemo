@@ -10,6 +10,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,7 +33,7 @@ public class FragmentMine extends Fragment implements View.OnClickListener {
     private TextView textView;
     private ImageView imageView;
 
-    private enum CollapsingToolbarLayoutState{
+    private enum CollapsingToolbarLayoutState {
         EXPANDED,
         COLLAPSED,
         INTERNEDIATE
@@ -40,29 +42,32 @@ public class FragmentMine extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if(view == null){
-            view = inflater.inflate(R.layout.fragment_mine,container,false);
+        if (view == null) {
+            view = inflater.inflate(R.layout.fragment_mine, container, false);
+            Window window = getActivity().getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(getActivity().getResources().getColor(R.color.colorStateBar));
             initMineData();
-            appBarLayout = (AppBarLayout)view.findViewById(R.id.appbar_mine);
-            textView =(TextView)view.findViewById(R.id.txt_mine_title_mark);
-            imageView = (ImageView)view.findViewById(R.id.img_mine_bar_head);
+            appBarLayout = (AppBarLayout) view.findViewById(R.id.appbar_mine);
+            textView = (TextView) view.findViewById(R.id.txt_mine_title_mark);
+            imageView = (ImageView) view.findViewById(R.id.img_mine_bar_head);
             appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
                 @Override
                 public void onOffsetChanged(AppBarLayout appBarLayout, int i) {
                     int newalpha = 255 + i;
-                    newalpha = newalpha <0?0:newalpha;
+                    newalpha = newalpha < 0 ? 0 : newalpha;
                     imageView.setAlpha(newalpha);
                     textView.setAlpha(newalpha);
-                    if(i==0){
-                        if(state != CollapsingToolbarLayoutState.EXPANDED){
+                    if (i == 0) {
+                        if (state != CollapsingToolbarLayoutState.EXPANDED) {
                             state = CollapsingToolbarLayoutState.EXPANDED;
                         }
-                    }else if(Math.abs(i) >= appBarLayout.getTotalScrollRange()){
-                        if(state != CollapsingToolbarLayoutState.COLLAPSED){
+                    } else if (Math.abs(i) >= appBarLayout.getTotalScrollRange()) {
+                        if (state != CollapsingToolbarLayoutState.COLLAPSED) {
                             state = CollapsingToolbarLayoutState.COLLAPSED;
                         }
-                    }else{
-                        if(state != CollapsingToolbarLayoutState.INTERNEDIATE){
+                    } else {
+                        if (state != CollapsingToolbarLayoutState.INTERNEDIATE) {
                             state = CollapsingToolbarLayoutState.INTERNEDIATE;
                         }
                     }
@@ -72,35 +77,35 @@ public class FragmentMine extends Fragment implements View.OnClickListener {
         return view;
     }
 
-    private void initMineData(){
-        MineRecycle gloden = new MineRecycle("会员中心",R.drawable.mine_vip_gloden_entrance_rect_bg,"开通立享多项特权");
+    private void initMineData() {
+        MineRecycle gloden = new MineRecycle("会员中心", R.drawable.mine_vip_gloden_entrance_rect_bg, "开通立享多项特权");
         mineRecycleViewArrayList.add(gloden);
-        MineRecycle notification = new MineRecycle("消息中心",R.drawable.mine_notifications_orange,"");
+        MineRecycle notification = new MineRecycle("消息中心", R.drawable.mine_notifications_orange, "");
         mineRecycleViewArrayList.add(notification);
-        MineRecycle myeyes = new MineRecycle("我的关注",R.drawable.mine_eyes_on_red_green,"");
+        MineRecycle myeyes = new MineRecycle("我的关注", R.drawable.mine_eyes_on_red_green, "");
         mineRecycleViewArrayList.add(myeyes);
-        MineRecycle collection = new MineRecycle("我的收藏",R.drawable.mine_my_collection_blue,"");
+        MineRecycle collection = new MineRecycle("我的收藏", R.drawable.mine_my_collection_blue, "");
         mineRecycleViewArrayList.add(collection);
-        MineRecycle bought = new MineRecycle("已购买的内容",R.drawable.mine_youdao_course_bought_orange,"");
+        MineRecycle bought = new MineRecycle("已购买的内容", R.drawable.mine_youdao_course_bought_orange, "");
         mineRecycleViewArrayList.add(bought);
-        MineRecycle download = new MineRecycle("已下载专栏",R.drawable.mine_youdao_course_download_yellow,"");
+        MineRecycle download = new MineRecycle("已下载专栏", R.drawable.mine_youdao_course_download_yellow, "");
         mineRecycleViewArrayList.add(download);
-        MineRecycle coupon = new MineRecycle("我的优惠券",R.drawable.mine_my_coupon_golden,"");
+        MineRecycle coupon = new MineRecycle("我的优惠券", R.drawable.mine_my_coupon_golden, "");
         mineRecycleViewArrayList.add(coupon);
-        MineRecycle course = new MineRecycle("我的精品课",R.drawable.mine_youdao_course_green,"");
+        MineRecycle course = new MineRecycle("我的精品课", R.drawable.mine_youdao_course_green, "");
         mineRecycleViewArrayList.add(course);
-        MineRecycle dictdownload = new MineRecycle("下载离线数据包",R.drawable.mine_download_dict_red,"");
+        MineRecycle dictdownload = new MineRecycle("下载离线数据包", R.drawable.mine_download_dict_red, "");
         mineRecycleViewArrayList.add(dictdownload);
-        MineRecycle phonecard = new MineRecycle("免流量专区",R.drawable.mine_phonecard_orange,"");
+        MineRecycle phonecard = new MineRecycle("免流量专区", R.drawable.mine_phonecard_orange, "");
         mineRecycleViewArrayList.add(phonecard);
-        MineRecycle setting = new MineRecycle("设置",R.drawable.mine_setting_blue,"");
+        MineRecycle setting = new MineRecycle("设置", R.drawable.mine_setting_blue, "");
         mineRecycleViewArrayList.add(setting);
-        MineRecycle like = new MineRecycle("满意度调查",R.drawable.mine_like_solid_red,"");
+        MineRecycle like = new MineRecycle("满意度调查", R.drawable.mine_like_solid_red, "");
         mineRecycleViewArrayList.add(like);
-        mrecyclerView = (RecyclerView)view.findViewById(R.id.recycle_mine);
-        mineAdapter = new MineRecycleAdapter(getActivity(),mineRecycleViewArrayList);
+        mrecyclerView = (RecyclerView) view.findViewById(R.id.recycle_mine);
+        mineAdapter = new MineRecycleAdapter(getActivity(), mineRecycleViewArrayList);
         mrecyclerView.setAdapter(mineAdapter);
-        mrecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
+        mrecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
     }
 
     @Override
@@ -108,14 +113,5 @@ public class FragmentMine extends Fragment implements View.OnClickListener {
 
     }
 
-    //    @Override
-//    protected View initView() {
-//        MineView = View.inflate(mContext,R.layout.fragment_mine, null);
-//        return MineView;
-//    }
-//
-//    @Override
-//    protected void initData() {
-//        super.initData();
-//    }
+
 }

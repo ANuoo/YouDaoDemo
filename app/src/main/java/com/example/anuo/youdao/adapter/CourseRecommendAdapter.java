@@ -17,14 +17,14 @@ public class CourseRecommendAdapter extends RecyclerView.Adapter<CourseRecommend
     private Context context;
     private List<CourseRecommendView> courseRecommendViews;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textTitle;
         TextView textName;
         TextView textNameMark;
         TextView textMark;
 
-        public ViewHolder(View view){
+        public ViewHolder(View view) {
             super(view);
             imageView = view.findViewById(R.id.img_course_recommend);
             textTitle = view.findViewById(R.id.txt_course_recommend_list_title);
@@ -34,7 +34,7 @@ public class CourseRecommendAdapter extends RecyclerView.Adapter<CourseRecommend
         }
     }
 
-    public CourseRecommendAdapter(Context context,List<CourseRecommendView> courseRecommendViews){
+    public CourseRecommendAdapter(Context context, List<CourseRecommendView> courseRecommendViews) {
         this.context = context;
         this.courseRecommendViews = courseRecommendViews;
     }
@@ -42,7 +42,7 @@ public class CourseRecommendAdapter extends RecyclerView.Adapter<CourseRecommend
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = View.inflate(context,R.layout.course_recycleview_recommend_item,null);
+        View view = View.inflate(context, R.layout.course_recycleview_recommend_item, null);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }

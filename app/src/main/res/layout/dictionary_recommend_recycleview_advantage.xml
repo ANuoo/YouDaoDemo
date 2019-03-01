@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="250dp"
     android:layout_marginStart="10dp"
@@ -11,17 +10,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textSize="16sp"
-        android:textColor="@color/colorDictionaryRecommendTitle" />
+        android:textColor="@color/colorDictionaryRecommendTitle"
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/img_dictionary_recommend_picture_ad"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        android:contentDescription="@string/img_dictionary_recommend_picture_ad"
         android:layout_below="@id/txt_dictionary_recommend_ad_title"
         android:layout_marginTop="8dp"
-        android:scaleType="centerCrop"/>
+        android:contentDescription="@string/img_dictionary_recommend_picture_ad"
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/txt_dictionary_recommend_ad_mark"
@@ -29,8 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/img_dictionary_recommend_picture_ad"
         android:layout_marginTop="5dp"
-        android:textSize="13sp"
-        android:textColor="@color/colorDictionaryRecommendMark" />
+        android:textColor="@color/colorDictionaryRecommendMark"
+        android:textSize="13sp" />
 
     <View
         android:layout_width="match_parent"

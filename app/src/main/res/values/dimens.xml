@@ -7,4 +7,5 @@
     <dimen name="init_float_margin">10dp</dimen>
     <dimen name="course_guidance_first_item">25dp</dimen>
     <dimen name="course_guidance_item">4dp</dimen>
+    <dimen name="search_size">15sp</dimen>
 </resources>

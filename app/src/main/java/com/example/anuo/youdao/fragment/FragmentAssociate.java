@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.example.anuo.youdao.R;
 import com.example.anuo.youdao.activity.WordActivity;
 
-public class FragmentAssociate extends Fragment  {
+public class FragmentAssociate extends Fragment {
     private View view;
 
     @Nullable
@@ -23,28 +23,31 @@ public class FragmentAssociate extends Fragment  {
             view = inflater.inflate(R.layout.search_recycleview_associate_item, container, false);
             Bundle bundle = this.getArguments();
 
-            TextView textWord = (TextView)view.findViewById(R.id.txt_search_associate_enter);
-            TextView textExplain = (TextView)view.findViewById(R.id.txt_search_associate_explain);
+            TextView textWord = (TextView) view.findViewById(R.id.txt_search_associate_enter);
+            TextView textExplain = (TextView) view.findViewById(R.id.txt_search_associate_explain);
             final String data = bundle.getString("word");
             textWord.setText(data);
-            textExplain.setText(bundle.getString("explain"));
+            final String explain = bundle.getString("explain");
+            textExplain.setText(explain);
             textWord.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(),WordActivity.class);
-                    intent.putExtra("data",data);
+                    Intent intent = new Intent(getActivity(), WordActivity.class);
+                    intent.putExtra("data", data);
+                    intent.putExtra("explain", explain);
                     startActivity(intent);
                 }
             });
             textExplain.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(),WordActivity.class);
-                    intent.putExtra("data",data);
+                    Intent intent = new Intent(getActivity(), WordActivity.class);
+                    intent.putExtra("data", data);
+                    intent.putExtra("explain", explain);
                     startActivity(intent);
                 }
             });
-            }
+        }
 
         return view;
     }
