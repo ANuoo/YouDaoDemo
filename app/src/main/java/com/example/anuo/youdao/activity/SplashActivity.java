@@ -15,7 +15,6 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ///还没有加载布局,是睡眠1秒，确保黑屏或白屏效果明显
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
