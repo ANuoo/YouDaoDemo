@@ -1,7 +1,6 @@
 # 仿有道词典
 ##  UI
   主布局是MainActivity,其中为了实现页面的切换，我用了radiogroup，radiogoup中有五个radiobutton，并使用了selector为每个button设置了点击的图标切换，还为每个radiogroup设置了对应的fragment，当点击图标时，结合getId来切换fragment。
-  ![image](https://github.com/ANuoo/YouDaoDemo/tree/master/app/src/main/res/gif)
 </br>
 </br>
 ## fragment
